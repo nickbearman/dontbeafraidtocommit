@@ -5,4 +5,5 @@
 * git commit
 * git log
 * git diff
+* git mv
 * git rm

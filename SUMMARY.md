@@ -9,7 +9,7 @@
     * [GitHub](git/github.md)
     * [Git command summary](git/commandsummary.md)
 * [How to report a bug](bugs/README.md)
-* [How to submit a pull request](fixes/README.md)
+* [How to submit a pull request](fixes/pullrequest.md)
 * [Bonus](bonus/README.md)
 	* [What is Docker?](bonus/docker.md)
 	* [What is a python virtual environment?](bonus/pythonvirtualenv.md)

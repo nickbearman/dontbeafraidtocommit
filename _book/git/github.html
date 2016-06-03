@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Getting set up | Don&#39;t be afraid to commit</title>
+        <title>GitHub | Don&#39;t be afraid to commit</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../git/repository.html" />
+    <link rel="next" href="../git/commandsummary.html" />
     
     
-    <link rel="prev" href="../git/index.html" />
+    <link rel="prev" href="../git/repository.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="2.1"
-        data-chapter-title="Getting set up"
-        data-filepath="git/gitsetup.md"
+        data-level="2.3"
+        data-chapter-title="GitHub"
+        data-filepath="git/github.md"
         data-basepath=".."
         data-revision="Thu Jun 02 2016 22:50:29 GMT+0100 (BST)"
         data-innerlanguage="">
@@ -149,7 +149,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1" data-path="git/gitsetup.html">
+        <li class="chapter " data-level="2.1" data-path="git/gitsetup.html">
             
                 
                     <a href="../git/gitsetup.html">
@@ -179,7 +179,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="git/github.html">
+        <li class="chapter active" data-level="2.3" data-path="git/github.html">
             
                 
                     <a href="../git/github.html">
@@ -327,22 +327,53 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="first-time-setup-steps">First time setup steps</h1>
-<p>Since Git is designed to record changes to a global repository, it needs to be able to identify you and provide a means of contact. When you first start working with Git, you need to do a couple of initial setup steps to configure this information.</p>
-<p>These steps are global, in that they will apply for all repositories you set up on your current local machine.</p>
-<p><strong>This information will be visible in all repositories you make public so don&apos;t use details you&apos;d rather keep private</strong></p>
-<p><em>These settings can be overridden on a per-repository basis but we won&apos;t cover that here</em></p>
-<p>At your git terminal type:</p>
-<pre><code>git config --global user.name &quot;Your name&quot;
-git config --global user.email &quot;your.email@yourmailserver.com&quot;
-</code></pre><p>The command:</p>
-<pre><code>git config --list
-</code></pre><p>will show you the existing Git config settings.</p>
-<p>There are many additional settings that can be configured using git-config. For a comprehensive listing see <a href="https://git-scm.com/docs/git-config" target="_blank">git-config</a>.</p>
-<h2 id="configuring-git-to-use-the-text-editor-of-your-choice">Configuring Git to use the text editor of your choice</h2>
-<p>By default Git will use your operating system&apos;s default editor. On Windows that&apos;s probably NotePad, on Mac it&apos;s probably Text Edit. On Linux- vi, or nano. The following command is used to set the default text editor for Git:</p>
-<pre><code>git config --global core.editor &quot;/path/to/your/editorexecutable&quot;
-</code></pre><p>The exact format of the path to use here will be dependent on your operating system. <a href="http://swcarpentry.github.io/git-novice/02-setup.html" target="_blank">This link</a> shows you how to set up the core editor config for a number of example packages in Windows, Mac and Linux.</p>
+                        <h1 id="working-with-remote-repositories">Working with remote repositories</h1>
+<p>So now we know how to work with repositories on our local file system. How do we host our repository on GitHub?</p>
+<p>Online versions of repositories are generally known as <strong>remotes</strong>, and the process of uploading code to a remote is known as a <strong>push</strong>.</p>
+<p>The basic workflow is:</p>
+<ul>
+<li>Create a new repository for your code on GitHub</li>
+<li>Add this as a remote for your local repository</li>
+<li>Make changes to your local repository as usual</li>
+<li>Upload or push your changes to the remote</li>
+</ul>
+<h2 id="creating-a-repository-on-github">Creating a repository on GitHub</h2>
+<p>First of all, you need to create an account on GitHub and sign in at <a href="http://github.com" target="_blank">github.com</a>.</p>
+<p>The current GitHub sign in page looks like this:</p>
+<p><img src="../images/github_sigin.png" alt="GitHub"></p>
+<p><strong>Tip: Enable two-factor authentication for better security</strong></p>
+<p>If you&apos;re comfortable with SSH then add your SSH key to your account profile for secure committing without your password. For the purposes of this tutorial we will use https instead.</p>
+<p>Go to the repository tab on your home page and click the green &quot;New&quot; button.</p>
+<p><img src="../images/github_newrepo.png" alt="GitHub New Repo"></p>
+<p>Give your repository a useful name and description. You&apos;ll need to leave it as a public repository (private repositories are currently only available with a paid-for plan). For the purposes of this workshop, leave the option to initialise the repository with a README unticked, and don&apos;t select a .gitignore file or license. Then click the big green &quot;Create Repository&quot; button. </p>
+<p><img src="../images/github_newrepo2.png" alt="GitHub New Repo #2"></p>
+<p>The final stage provides you with the command line instructions you need for adding the GitHub repository as a remote for your local copy. </p>
+<p><em>Note the option to switch between ssh and https, and how this changes the address for the repository. Stick with https for now</em></p>
+<p>We&apos;ll add this repository as a remote for the repository we created earlier, so follow the instructions in the second box, titled &quot;... or push an existing repository from the command line&quot;.</p>
+<p><img src="../images/github_newrepo3.png" alt="GitHub New Repo #3"></p>
+<p>In our repository folder that we created earlier, type the following commands, substituting your GitHub username and the repository name into the appropriate places:</p>
+<pre><code>git remote add origin https://github.com/&lt;yourusename&gt;/&lt;yourreponame&gt;.git
+git push -u origin master
+</code></pre><p><em>The term &quot;master&quot; refers to the default or master branch in the repository. Branches are effectively self-contained copies of the files in the project that can be merged together when required. They are often used for development and stable versions of source code. See the <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell" target="_blank">documentation</a> for more detail on branching and merging.</em></p>
+<p>Go back to <a href="repository.html">Creating your first local repository</a> and practice making some more changes to your local repository, then use <strong>git push</strong> to push them to the remote repository. Now you might see the value of good commit messages, as these are fully visible in your repository!</p>
+<p><em>Note that once you have set the master branch you don&apos;t need to use the full &quot;-u origin master&quot; statement. Just &quot;git push&quot; will do</em></p>
+<h2 id="working-with-repositories-owned-by-others">Working with repositories owned by others</h2>
+<p>Generally speaking, we only have permission to make changes to our own repositories on GitHub, so any collaboration with a repository owned by someone else must go via our own copy or fork of their code.</p>
+<p>The basic workflow is as follows:</p>
+<ul>
+<li>Copy or fork the remote repository using your GitHub account</li>
+<li>Download or clone your copy of the repository to your local filesystem</li>
+<li>Make your changes locally and upload or push the changes to your remote copy of the repository</li>
+<li>Tell the original repository owner about your changes, or make a pull request</li>
+<li>if there are no conflicts with the original code, get your changes merged, or your pull request accepted</li>
+</ul>
+<p>Visit <a href="https://github.com/archaeogeek/foss4gukhipsteripsem" target="_blank">github.com/archaeogeek/foss4gukhipsteripsem</a> and click the &quot;fork&quot; button to make a copy of the repository under your own GitHub account.</p>
+<p><img src="../images/hipsteripsem.png" alt="Hipster Ipsem"></p>
+<p>Navigate to your copy of the repository and click the green &quot;Clone or download&quot; button. Click the clipboard next to the https clone URL to copy it.</p>
+<p><img src="../images/clone_repo.png" alt="Hipster Ipsem"></p>
+<p>At your command prompt, change to your top level git repositories directory (that we created at the start of <a href="repository.html">Creating your first local repository</a>). Type the following:</p>
+<pre><code>git clone &lt;the pasted URL&gt;
+</code></pre><p>Hit return, and this should clone your copy of the hipsteripsem repository to your local machine, in a folder called foss4gukhipsteripsem. You can now work with your copy of the repository, making changes locally and pushing them to your copy. </p>
 
                     
                     </section>
@@ -353,10 +384,10 @@ git config --global user.email &quot;your.email@yourmailserver.com&quot;
         </div>
 
         
-        <a href="../git/index.html" class="navigation navigation-prev " aria-label="Previous page: Using Git"><i class="fa fa-angle-left"></i></a>
+        <a href="../git/repository.html" class="navigation navigation-prev " aria-label="Previous page: Your first repository"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../git/repository.html" class="navigation navigation-next " aria-label="Next page: Your first repository"><i class="fa fa-angle-right"></i></a>
+        <a href="../git/commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

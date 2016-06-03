@@ -112,4 +112,15 @@ One useful command in this section is the "--amend" flag for git commit, which a
 
 ##Ignoring files##
 
-*Tip: There are many scenarios where you might end up with files in your repository that you don't want to place under source control. These might be backup files that text editors create, compiled python files (.pyc) or even files with sensitive information in, such as passwords. You can place these in a file called .gitignore (which will be hidden by default).*
+There are many scenarios where you might end up with files in your repository that you don't want to place under source control. These might be backup files that text editors create, compiled python files (.pyc) or even files with sensitive information in, such as passwords. You can place these in a file called .gitignore (which will be hidden by default).
+
+##Removing and renaming files##
+
+Git uses the unix mv (move or rename) and rm (remove) commands, but also deals with the tasks of staging and unstaging the files too.
+
+It's important to note that running git rm on a file will not remove it from your file system, it will simply unstage it. The following commands do different things:
+
+	git rm file #unstages file but doesn't remove it from the file system
+	git rm --cached file #
+	git rm -f file # unstages and removes file?
+

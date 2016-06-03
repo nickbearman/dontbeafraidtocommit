@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="../git/commandsummary.html" />
+    <link rel="next" href="../git/github.html" />
     
     
     <link rel="prev" href="../git/gitsetup.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="Your first repository"
         data-filepath="git/repository.md"
         data-basepath=".."
-        data-revision="Mon May 30 2016 20:49:05 GMT+0100 (BST)"
+        data-revision="Thu Jun 02 2016 22:50:29 GMT+0100 (BST)"
         data-innerlanguage="">
     
 
@@ -181,7 +181,15 @@
     
         <li class="chapter " data-level="2.3" data-path="git/github.html">
             
-            <span><b>2.3.</b> GitHub</span>
+                
+                    <a href="../git/github.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        GitHub
+                    </a>
             
             
         </li>
@@ -384,8 +392,14 @@
 <p>One useful command in this section is the &quot;--amend&quot; flag for git commit, which allows you to amend the previous commit, for example to fix a spelling mistake.</p>
 <pre><code>git commit --amend
 </code></pre><h2 id="ignoring-files">Ignoring files</h2>
-<p><em>Tip: There are many scenarios where you might end up with files in your repository that you don&apos;t want to place under source control. These might be backup files that text editors create, compiled python files (.pyc) or even files with sensitive information in, such as passwords. You can place these in a file called .gitignore (which will be hidden by default).</em></p>
-
+<p>There are many scenarios where you might end up with files in your repository that you don&apos;t want to place under source control. These might be backup files that text editors create, compiled python files (.pyc) or even files with sensitive information in, such as passwords. You can place these in a file called .gitignore (which will be hidden by default).</p>
+<h2 id="removing-and-renaming-files">Removing and renaming files</h2>
+<p>Git uses the unix mv (move or rename) and rm (remove) commands, but also deals with the tasks of staging and unstaging the files too.</p>
+<p>It&apos;s important to note that running git rm on a file will not remove it from your file system, it will simply unstage it. The following commands do different things:</p>
+<pre><code>git rm file #unstages file but doesn&apos;t remove it from the file system
+git rm --cached file #
+git rm -f file # unstages and removes file?
+</code></pre>
                     
                     </section>
                 
@@ -398,7 +412,7 @@
         <a href="../git/gitsetup.html" class="navigation navigation-prev " aria-label="Previous page: Getting set up"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../git/commandsummary.html" class="navigation navigation-next " aria-label="Next page: Git command summary"><i class="fa fa-angle-right"></i></a>
+        <a href="../git/github.html" class="navigation navigation-next " aria-label="Next page: GitHub"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
