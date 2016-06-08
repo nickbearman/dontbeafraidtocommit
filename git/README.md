@@ -16,11 +16,11 @@ Git is not the only Distributed VCS tool out there, but it has become the most p
 
 It is different to Subversion and other Centralised VCS because rather than storing each change as a patch to a specific file, it treats each change as a snapshot of the whole repository file structure. If a file in the structure hasn't changed, then Git simply stores a link back to the previous identical file.
 
-**Old School CVCS:**
+**Old-School Centralised VCS:**
 
 ![Oldschool VCS](../images/oldschool_vcs.png "Images used under CC BY 3.0 from https://github.com/git/git-scm.com")
 
-**New School DVCS:**
+**New-School Distributed VCS like Git:**
 
 ![Oldschool VCS](../images/newschool_vcs.png "Images used under CC BY 3.0 from https://github.com/git/git-scm.com")
 

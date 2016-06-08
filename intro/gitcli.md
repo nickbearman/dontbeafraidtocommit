@@ -27,13 +27,10 @@ For the purposes of this workshop you should use **Git Shell**.
 
 ## Mac
 
-If you're using Git via XCode then start up terminal and type
+If you're using Git via XCodeor GitHub Desktop then start up terminal and type
 
 	git
 
-If you installed GitHub Desktop then also start up terminal and type
-
-	git
 
 If this doesn't work (for example, if it prompts you to install the XCode developer tools) then close terminal, and in GitHub desktop, go to the preferences, and the advanced tab, and click the button marked "Install command line tools". You should then be able to open terminal and access the git command line as above.
 
