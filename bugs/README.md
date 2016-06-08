@@ -22,6 +22,7 @@ Report the results of these tests to the developer. Let them know the configurat
 
 ##Use the proper channels for researching and reporting the problem##
 
+
 ###Bug Trackers###
 
 Most software projects have a dedicated bug tracker for reporting problems. This the correct place to report your problem rather than any other channel, such as twitter o email, even if it is quicker for you to dash off an email to someone, however quick and easy it is to do that. 
