@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="../git/github.html" />
+    <link rel="next" href="../git/stages.html" />
     
     
     <link rel="prev" href="../git/gitsetup.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="Your first repository"
         data-filepath="git/repository.md"
         data-basepath=".."
-        data-revision="Wed Jun 08 2016 18:06:27 GMT+0100 (BST)"
+        data-revision="Wed Jun 08 2016 19:49:34 GMT+0100 (BST)"
         data-innerlanguage="">
     
 
@@ -179,14 +179,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="git/github.html">
+        <li class="chapter " data-level="2.3" data-path="git/stages.html">
+            
+                
+                    <a href="../git/stages.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        The three stages of Git
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="git/github.html">
             
                 
                     <a href="../git/github.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         GitHub
                     </a>
@@ -194,14 +209,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="git/commandsummary.html">
+        <li class="chapter " data-level="2.5" data-path="git/commandsummary.html">
             
                 
                     <a href="../git/commandsummary.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Git command summary
                     </a>
@@ -227,6 +242,27 @@
                     </a>
             
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="bugs/specifics.html">
+            
+                
+                    <a href="../bugs/specifics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Specifics- Web and QGIS
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="4" data-path="fixes/pullrequest.html">
@@ -242,6 +278,27 @@
                     </a>
             
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="fixes/hipster.html">
+            
+                
+                    <a href="../fixes/hipster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Fixing HipsterIpsem
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="5" data-path="bonus/index.html">
@@ -253,29 +310,9 @@
                         
                             <b>5.</b>
                         
-                        Bonus
+                        Virtual Environments and Containers
                     </a>
             
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="bonus/docker.html">
-            
-            <span><b>5.1.</b> What is Docker?</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="bonus/pythonvirtualenv.html">
-            
-            <span><b>5.2.</b> What is a python virtual environment?</span>
-            
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -353,53 +390,7 @@
 <pre><code>touch blah.txt
 </code></pre><p>This creates a blank text file called &quot;blah.txt&quot; in the folder.</p>
 <p>At this point, we have enough in place to start committing to our repository.</p>
-<h2 id="the-three-stages-of-git">The three stages of Git</h2>
-<p>Files in a repository go through three stages before being under version control with git:</p>
-<ul>
-<li>Untracked: the file exists, but is not part of git&apos;s version control</li>
-<li>Staged: the file has been added to git&apos;s version control but changes have not been committed</li>
-<li>Committed: the change has been committed</li>
-</ul>
-<p>Git-status is used to understand what stage the files in a repository are at.</p>
-<pre><code>git status
-</code></pre><p>The output of this command not only tells you the stage of the files in your repository but also gives you some handy tips on what to do next.</p>
-<p><img src="../images/git_status1.png" alt="Git Status #1"></p>
-<p>So our next stage is to add our files to the staging area:</p>
-<pre><code>git add blah.txt
-</code></pre><p>If we re-run the git status command at this point the output has changed:</p>
-<p><img src="../images/git_status2.png" alt="Git Status #2"></p>
-<p>The final stage is to commit the change we have made. We do this by recording a short message that explains what we did and why. This human-readable explanation will go alongside Git&apos;s own record of the change and the file structure snapshot at that point.</p>
-<pre><code>git commit
-</code></pre><p>This pops open your default text editor (depending on what you configured in your setup stage) and asks for a commit message. The screenshot below shows an example using the nano editor on linux:</p>
-<p><img src="../images/git_commit1.png" alt="Git Commit #1"></p>
-<p>Once your commit message has been saved and you are back at your git command prompt, you will see a summary of the changes git has made. Running git status again will tell you that your &quot;working directory is clean&quot;, in other words you have no untracked files or uncommitted changes:</p>
-<p><img src="../images/git_commit2.png" alt="Git Commit #2"></p>
-<p><em>Note that we can shorten these steps slightly using the -m flag to the git commit statement. Staging and committing can therefore be done in one go using the following syntax:</em></p>
-<pre><code>git commit -m&quot;First commit of currently blank text file&quot;
-</code></pre><p>Also, running git log will give you a nicely formatted record of your changes:</p>
-<pre><code>git log
-</code></pre><p><img src="../images/git_log.png" alt="Git Log"></p>
-<p><strong>Note that long string of characters and numbers. That&apos;s an unique ID, or SHA, for that particular commit. You might sometimes need to refer to this!</strong></p>
-<p>Let&apos;s make a change to the file so we can try out some other commands...</p>
-<p>In your text editor of choice, add a line to blah.txt that says what your name is, and save the file.</p>
-<p>We can view the difference between that version of the file and the committed one (eg the changes) using the following command:</p>
-<pre><code>git diff
-</code></pre><p>This should give output similar to the following:</p>
-<p><img src="../images/git_diff.png" alt="Git Diff"></p>
-<p>Again we need to add this file to the staging area and then commit it&apos;s changes. Since the file is already in the repository, we can use another shortcut to add it and commit it in one go:</p>
-<pre><code>git commit -am&quot;Added name to blah.txt&quot;
-</code></pre><p>Running git diff again should show no changes, as the file and repository are up to date.</p>
-<p>One useful command in this section is the &quot;--amend&quot; flag for git commit, which allows you to amend the previous commit, for example to fix a spelling mistake.</p>
-<pre><code>git commit --amend
-</code></pre><h2 id="ignoring-files">Ignoring files</h2>
-<p>There are many scenarios where you might end up with files in your repository that you don&apos;t want to place under source control. These might be backup files that text editors create, compiled python files (.pyc) or even files with sensitive information in, such as passwords. You can place these in a file called .gitignore (which will be hidden by default).</p>
-<h2 id="removing-and-renaming-files">Removing and renaming files</h2>
-<p>Git uses the unix mv (move or rename) and rm (remove) commands, but also deals with the tasks of staging and unstaging the files too.</p>
-<p>It&apos;s important to note that running git rm on a file will not remove it from your file system, it will simply unstage it. The following commands do different things:</p>
-<pre><code>git rm file #unstages file but doesn&apos;t remove it from the file system
-git rm --cached file #
-git rm -f file # unstages and removes file?
-</code></pre>
+
                     
                     </section>
                 
@@ -412,7 +403,7 @@ git rm -f file # unstages and removes file?
         <a href="../git/gitsetup.html" class="navigation navigation-prev " aria-label="Previous page: Getting set up"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../git/github.html" class="navigation navigation-next " aria-label="Next page: GitHub"><i class="fa fa-angle-right"></i></a>
+        <a href="../git/stages.html" class="navigation navigation-next " aria-label="Next page: The three stages of Git"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

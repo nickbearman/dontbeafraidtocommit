@@ -49,11 +49,11 @@
         
         
     <div class="book"
-        data-level="2.4"
+        data-level="2.5"
         data-chapter-title="Git command summary"
         data-filepath="git/commandsummary.md"
         data-basepath=".."
-        data-revision="Wed Jun 08 2016 18:06:27 GMT+0100 (BST)"
+        data-revision="Wed Jun 08 2016 19:49:34 GMT+0100 (BST)"
         data-innerlanguage="">
     
 
@@ -179,14 +179,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="git/github.html">
+        <li class="chapter " data-level="2.3" data-path="git/stages.html">
+            
+                
+                    <a href="../git/stages.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        The three stages of Git
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="git/github.html">
             
                 
                     <a href="../git/github.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         GitHub
                     </a>
@@ -194,14 +209,14 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="git/commandsummary.html">
+        <li class="chapter active" data-level="2.5" data-path="git/commandsummary.html">
             
                 
                     <a href="../git/commandsummary.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Git command summary
                     </a>
@@ -227,6 +242,27 @@
                     </a>
             
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="bugs/specifics.html">
+            
+                
+                    <a href="../bugs/specifics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Specifics- Web and QGIS
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="4" data-path="fixes/pullrequest.html">
@@ -242,6 +278,27 @@
                     </a>
             
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="fixes/hipster.html">
+            
+                
+                    <a href="../fixes/hipster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Fixing HipsterIpsem
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="5" data-path="bonus/index.html">
@@ -253,29 +310,9 @@
                         
                             <b>5.</b>
                         
-                        Bonus
+                        Virtual Environments and Containers
                     </a>
             
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="bonus/docker.html">
-            
-            <span><b>5.1.</b> What is Docker?</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="bonus/pythonvirtualenv.html">
-            
-            <span><b>5.2.</b> What is a python virtual environment?</span>
-            
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -329,21 +366,27 @@
                     
                         <h1 id="git-command-summary">Git Command Summary</h1>
 <ul>
-<li>git init</li>
-<li>git add</li>
-<li>git commit<ul>
-<li>-a</li>
-<li>-m</li>
+<li><strong>git init</strong> <em>initialise a repository</em></li>
+<li><strong>git add <file></file></strong> <em>add a file to the staging area</em></li>
+<li><strong>git commit</strong> <em>commit changes to the repository</em><ul>
+<li><strong>-a</strong> <em>automatically stage existing files</em></li>
+<li><strong>-m</strong> <em>add commit message directly</em></li>
 </ul>
 </li>
-<li>git log</li>
-<li>git diff</li>
-<li>git mv</li>
-<li>git rm</li>
-<li>git clone</li>
-<li>git checkout -b <branchname></branchname></li>
-<li>git push<ul>
-<li>-u origin <branchname></branchname></li>
+<li><strong> git log</strong> <em>show changes in commits</em></li>
+<li><strong>git diff</strong> <em>compare repository with last commit</em></li>
+<li><strong>git mv</strong> <em>rename files in filesystem and repository</em></li>
+<li><strong>git rm</strong> <em>remove files in filesystem and repository</em><ul>
+<li><strong>--cached</strong> <em>remove files from repository but not filesystem</em></li>
+</ul>
+</li>
+<li><strong>git clone</strong> <em>clone a remote repository</em></li>
+<li><strong>git checkout <branchname></branchname></strong> <em>checkout a new branch</em><ul>
+<li><strong>git checkout -b <branchname></branchname></strong>  <em>create and checkout a new branch</em></li>
+</ul>
+</li>
+<li><strong>git push</strong> <em>push your committed changes to the remote repository</em><ul>
+<li><strong>-u origin <branchname></branchname></strong> <em>set the remote repository branch you want to commit to</em></li>
 </ul>
 </li>
 </ul>

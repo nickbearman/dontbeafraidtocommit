@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Command Line Git | Don&#39;t be afraid to commit</title>
+        <title>The three stages of Git | Don&#39;t be afraid to commit</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../git/index.html" />
+    <link rel="next" href="../git/github.html" />
     
     
-    <link rel="prev" href="../intro/gitinstall.html" />
+    <link rel="prev" href="../git/repository.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="1.2"
-        data-chapter-title="Command Line Git"
-        data-filepath="intro/gitcli.md"
+        data-level="2.3"
+        data-chapter-title="The three stages of Git"
+        data-filepath="git/stages.md"
         data-basepath=".."
         data-revision="Wed Jun 08 2016 19:49:34 GMT+0100 (BST)"
         data-innerlanguage="">
@@ -113,7 +113,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="intro/gitcli.html">
+        <li class="chapter " data-level="1.2" data-path="intro/gitcli.html">
             
                 
                     <a href="../intro/gitcli.html">
@@ -179,7 +179,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="git/stages.html">
+        <li class="chapter active" data-level="2.3" data-path="git/stages.html">
             
                 
                     <a href="../git/stages.html">
@@ -364,34 +364,56 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="finding-git-once-its-installed">Finding Git once it&apos;s installed</h1>
-<h2 id="linux">Linux</h2>
-<p>Open a command prompt and type:</p>
-<pre><code>git
-</code></pre><h2 id="windows">Windows</h2>
-<p>If you installed Git for Windows then in your start menu, under &quot;Git&quot; you will have three options:</p>
+                        <h2 id="the-three-stages-of-git">The three stages of Git</h2>
+<p>Files in a repository go through three stages before being under version control with git:</p>
 <ul>
-<li>Git Bash- a command prompt that emulates a linux BASH terminal, giving you access to linux commands</li>
-<li>Git CMD- a modified windows command prompt</li>
-<li>Git GUI- a graphic user interface for Git</li>
+<li>Untracked: the file exists, but is not part of git&apos;s version control</li>
+<li>Staged: the file has been added to git&apos;s version control but changes have not been committed</li>
+<li>Committed: the change has been committed</li>
 </ul>
-<p>For the purposes of this workshop you should use <strong>Git Bash</strong>.</p>
-<p>If you installed GitHub Desktop then in your start menu, under &quot;GitHub, Inc&quot; you will have three options:</p>
+<p>Git-status is used to understand what stage the files in a repository are at.</p>
+<pre><code>git status
+</code></pre><p>The output of this command not only tells you the stage of the files in your repository but also gives you some handy tips on what to do next.</p>
+<p><img src="../images/git_status1.png" alt="Git Status #1"></p>
+<h3 id="stage">Stage</h3>
+<p>So our next stage is to add our files to the staging area:</p>
+<pre><code>git add blah.txt
+</code></pre><p>If we re-run the git status command at this point the output has changed:</p>
+<p><img src="../images/git_status2.png" alt="Git Status #2"></p>
+<h3 id="commit">Commit</h3>
+<p>The final stage is to commit the change we have made. We do this by recording a short message that explains what we did and why. This human-readable explanation will go alongside Git&apos;s own record of the change and the file structure snapshot at that point.</p>
+<pre><code>git commit
+</code></pre><p>This pops open your default text editor (depending on what you configured in your setup stage) and asks for a commit message. The screenshot below shows an example using the nano editor on linux:</p>
+<p><img src="../images/git_commit1.png" alt="Git Commit #1"></p>
+<p>Once your commit message has been saved and you are back at your git command prompt, you will see a summary of the changes git has made. Running git status again will tell you that your &quot;working directory is clean&quot;, in other words you have no untracked files or uncommitted changes:</p>
+<p><img src="../images/git_commit2.png" alt="Git Commit #2"></p>
+<p><em>Note that we can shorten these steps slightly using the -m flag to the git commit statement. Staging and committing can therefore be done in one go using the following syntax:</em></p>
+<pre><code>git commit -m&quot;First commit of currently blank text file&quot;
+</code></pre><p>Also, running git log will give you a nicely formatted record of your changes:</p>
+<pre><code>git log
+</code></pre><p><img src="../images/git_log.png" alt="Git Log"></p>
+<p><strong>Note that long string of characters and numbers. That&apos;s an unique ID, or SHA, for that particular commit. You might sometimes need to refer to this!</strong></p>
+<p>Let&apos;s make a change to the file so we can try out some other commands...</p>
+<p>In your text editor of choice, add a line to blah.txt that says what your name is, and save the file.</p>
+<p>We can view the difference between that version of the file and the committed one (eg the changes) using the following command:</p>
+<pre><code>git diff
+</code></pre><p>This should give output similar to the following:</p>
+<p><img src="../images/git_diff.png" alt="Git Diff"></p>
+<p>Again we need to add this file to the staging area and then commit it&apos;s changes. Since the file is already in the repository, we can use another shortcut to add it and commit it in one go:</p>
+<pre><code>git commit -am&quot;Added name to blah.txt&quot;
+</code></pre><p>Running git diff again should show no changes, as the file and repository are up to date.</p>
+<p>One useful command in this section is the &quot;--amend&quot; flag for git commit, which allows you to amend the previous commit, for example to fix a spelling mistake.</p>
+<pre><code>git commit --amend
+</code></pre><h2 id="ignoring-files">Ignoring files</h2>
+<p>There are many scenarios where you might end up with files in your repository that you don&apos;t want to place under source control. These might be backup files that text editors create, compiled python files (.pyc) or even files with sensitive information in, such as passwords. You can place these in a file called .gitignore (which will be hidden by default).</p>
+<h2 id="removing-and-renaming-files">Removing and renaming files</h2>
+<p>Git uses the unix mv (move or rename) and rm (remove) commands, but also deals with the tasks of staging and unstaging the files too.</p>
+<p><strong>It&apos;s important to note that you need to use a different version of the git rm (or even just rm) command depending on what you want to do</strong></p>
 <ul>
-<li>Git Shell- a powershell command prompt</li>
-<li>GitHub online support- a shortcut to GitHub Desktop&apos;s online support</li>
-<li>GitHub- a graphical user interface for Git</li>
+<li>rm file # removes a file that hasn&apos;t been added to the repository yet- this will delete the file from your file system</li>
+<li>git rm file # removes the file from the repository and deletes it from your file system</li>
+<li>git rm --cached file # removes the file from the repository but doesn&apos;t delete it from your file system</li>
 </ul>
-<p>For the purposes of this workshop you should use <strong>Git Shell</strong>.</p>
-<h2 id="mac">Mac</h2>
-<p>If you&apos;re using Git via XCodeor GitHub Desktop then start up terminal and type</p>
-<pre><code>git
-</code></pre><p>If this doesn&apos;t work (for example, if it prompts you to install the XCode developer tools) then close terminal, and in GitHub desktop, go to the preferences, and the advanced tab, and click the button marked &quot;Install command line tools&quot;. You should then be able to open terminal and access the git command line as above.</p>
-<h1 id="start-git">Start Git</h1>
-<p>In every case above, when you arrive at a command prompt, type:</p>
-<pre><code>git
-</code></pre><p>You will see an outline of the syntax plus a list of some of the most common commands, with an explanation of their usage.</p>
-<p><img src="../images/git_cli.png" alt="Git CLI"></p>
 
                     
                     </section>
@@ -402,10 +424,10 @@
         </div>
 
         
-        <a href="../intro/gitinstall.html" class="navigation navigation-prev " aria-label="Previous page: Installing Git"><i class="fa fa-angle-left"></i></a>
+        <a href="../git/repository.html" class="navigation navigation-prev " aria-label="Previous page: Your first repository"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../git/index.html" class="navigation navigation-next " aria-label="Next page: Using Git"><i class="fa fa-angle-right"></i></a>
+        <a href="../git/github.html" class="navigation navigation-next " aria-label="Next page: GitHub"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

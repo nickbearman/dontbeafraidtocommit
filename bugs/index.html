@@ -37,7 +37,7 @@
         
     
     
-    <link rel="next" href="../fixes/pullrequest.html" />
+    <link rel="next" href="../bugs/specifics.html" />
     
     
     <link rel="prev" href="../git/commandsummary.html" />
@@ -53,7 +53,7 @@
         data-chapter-title="How to report a bug"
         data-filepath="bugs/README.md"
         data-basepath=".."
-        data-revision="Wed Jun 08 2016 18:06:27 GMT+0100 (BST)"
+        data-revision="Wed Jun 08 2016 19:49:34 GMT+0100 (BST)"
         data-innerlanguage="">
     
 
@@ -179,14 +179,29 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="git/github.html">
+        <li class="chapter " data-level="2.3" data-path="git/stages.html">
+            
+                
+                    <a href="../git/stages.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        The three stages of Git
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="git/github.html">
             
                 
                     <a href="../git/github.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.3.</b>
+                            <b>2.4.</b>
                         
                         GitHub
                     </a>
@@ -194,14 +209,14 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="git/commandsummary.html">
+        <li class="chapter " data-level="2.5" data-path="git/commandsummary.html">
             
                 
                     <a href="../git/commandsummary.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>2.4.</b>
+                            <b>2.5.</b>
                         
                         Git command summary
                     </a>
@@ -227,6 +242,27 @@
                     </a>
             
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="bugs/specifics.html">
+            
+                
+                    <a href="../bugs/specifics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Specifics- Web and QGIS
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="4" data-path="fixes/pullrequest.html">
@@ -242,6 +278,27 @@
                     </a>
             
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="fixes/hipster.html">
+            
+                
+                    <a href="../fixes/hipster.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Fixing HipsterIpsem
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="5" data-path="bonus/index.html">
@@ -253,29 +310,9 @@
                         
                             <b>5.</b>
                         
-                        Bonus
+                        Virtual Environments and Containers
                     </a>
             
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1" data-path="bonus/docker.html">
-            
-            <span><b>5.1.</b> What is Docker?</span>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="5.2" data-path="bonus/pythonvirtualenv.html">
-            
-            <span><b>5.2.</b> What is a python virtual environment?</span>
-            
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -356,22 +393,6 @@
 <p><strong>This problem may be causing you some trouble and making it hard for you to do your work, but being rude to the developer is not going to make him inclined to fix your issue.</strong></p>
 <p>Your priorities are not the same as those of the developer. Do you have a work-around, such as using a different computer, or a different software package? If your problem is truly urgent and you have no work-arounds then consider hiring someone to fix the problem, or try to fix it yourself. Many open source projects do list companies that offer commercial support, so consider contacting them. </p>
 <p>The more information you can provide about your issue, the easier it will be for someone to fix it, and the more likely it is to happen.</p>
-<h2 id="software-specifics">Software specifics</h2>
-<h3 id="webbased-software">Web-based software</h3>
-<p>Most modern browsers now come with some form of developer console and toolkit. Examples include:</p>
-<ul>
-<li><a href="https://developer.chrome.com/devtools" target="_blank">Chrome Developer tools</a></li>
-<li><a href="http://getfirebug.com/" target="_blank">Firebug for firefox</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox" target="_blank">Firefox Toolbox</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85" target="_blank">Internet Explorer F12 Developer tools</a>.aspx)</li>
-</ul>
-<h3 id="qgis">QGIS</h3>
-<p><strong>When reporting QGIS issues it&apos;s really important to provide information on the source of your installation. For windows users, did you use the stand-alone installer or OSGeo4W? For linux users which repository did your software come from?</strong></p>
-<p>QGIS has a number of options for helping you debug problems including the messages panel, which logs messages for plugins as well as the main software itself. This can be activated from the bottom right corner of the main window in QGIS 2.14</p>
-<p><img src="../images/qgis_messagepanel.png" alt="QGIS Message Panel"></p>
-<p>Lutra Consulting have also released a plugin that helps with the bug reporting process. It&apos;s a little tricky to set up and use but extremely useful. Find it on <a href="http://plugins.qgis.org/plugins/report/" target="_blank">plugins.qgis.org</a> and instructions for use on their <a href="http://www.lutraconsulting.co.uk/blog/2016/05/12/qgis-report-plugin/" target="_blank">blog</a>.</p>
-<p>See the online documentation <a href="http://docs.qgis.org/2.8/en/docs/user_manual/preamble/help_and_support.html" target="_blank">help pages</a> for details of all the mailing lists and bug trackers.</p>
-<p>QGIS maintains a list of companies offering commercial support- see <a href="http://www.qgis.org/en/site/forusers/commercial_support.html" target="_blank">qgis.org/en/site/forusers/commercial_support.html</a> for details.</p>
 
                     
                     </section>
@@ -385,7 +406,7 @@
         <a href="../git/commandsummary.html" class="navigation navigation-prev " aria-label="Previous page: Git command summary"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../fixes/pullrequest.html" class="navigation navigation-next " aria-label="Next page: How to submit a pull request"><i class="fa fa-angle-right"></i></a>
+        <a href="../bugs/specifics.html" class="navigation navigation-next " aria-label="Next page: Specifics- Web and QGIS"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

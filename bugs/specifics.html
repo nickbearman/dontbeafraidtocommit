@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Command Line Git | Don&#39;t be afraid to commit</title>
+        <title>Specifics- Web and QGIS | Don&#39;t be afraid to commit</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../git/index.html" />
+    <link rel="next" href="../fixes/pullrequest.html" />
     
     
-    <link rel="prev" href="../intro/gitinstall.html" />
+    <link rel="prev" href="../bugs/index.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="1.2"
-        data-chapter-title="Command Line Git"
-        data-filepath="intro/gitcli.md"
+        data-level="3.1"
+        data-chapter-title="Specifics- Web and QGIS"
+        data-filepath="bugs/specifics.md"
         data-basepath=".."
         data-revision="Wed Jun 08 2016 19:49:34 GMT+0100 (BST)"
         data-innerlanguage="">
@@ -113,7 +113,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="intro/gitcli.html">
+        <li class="chapter " data-level="1.2" data-path="intro/gitcli.html">
             
                 
                     <a href="../intro/gitcli.html">
@@ -245,7 +245,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="bugs/specifics.html">
+        <li class="chapter active" data-level="3.1" data-path="bugs/specifics.html">
             
                 
                     <a href="../bugs/specifics.html">
@@ -364,34 +364,22 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="finding-git-once-its-installed">Finding Git once it&apos;s installed</h1>
-<h2 id="linux">Linux</h2>
-<p>Open a command prompt and type:</p>
-<pre><code>git
-</code></pre><h2 id="windows">Windows</h2>
-<p>If you installed Git for Windows then in your start menu, under &quot;Git&quot; you will have three options:</p>
+                        <h2 id="software-specifics">Software specifics</h2>
+<h3 id="webbased-software">Web-based software</h3>
+<p>Most modern browsers now come with some form of developer console and toolkit. Examples include:</p>
 <ul>
-<li>Git Bash- a command prompt that emulates a linux BASH terminal, giving you access to linux commands</li>
-<li>Git CMD- a modified windows command prompt</li>
-<li>Git GUI- a graphic user interface for Git</li>
+<li><a href="https://developer.chrome.com/devtools" target="_blank">Chrome Developer tools</a></li>
+<li><a href="http://getfirebug.com/" target="_blank">Firebug for firefox</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox" target="_blank">Firefox Toolbox</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85" target="_blank">Internet Explorer F12 Developer tools</a>.aspx)</li>
 </ul>
-<p>For the purposes of this workshop you should use <strong>Git Bash</strong>.</p>
-<p>If you installed GitHub Desktop then in your start menu, under &quot;GitHub, Inc&quot; you will have three options:</p>
-<ul>
-<li>Git Shell- a powershell command prompt</li>
-<li>GitHub online support- a shortcut to GitHub Desktop&apos;s online support</li>
-<li>GitHub- a graphical user interface for Git</li>
-</ul>
-<p>For the purposes of this workshop you should use <strong>Git Shell</strong>.</p>
-<h2 id="mac">Mac</h2>
-<p>If you&apos;re using Git via XCodeor GitHub Desktop then start up terminal and type</p>
-<pre><code>git
-</code></pre><p>If this doesn&apos;t work (for example, if it prompts you to install the XCode developer tools) then close terminal, and in GitHub desktop, go to the preferences, and the advanced tab, and click the button marked &quot;Install command line tools&quot;. You should then be able to open terminal and access the git command line as above.</p>
-<h1 id="start-git">Start Git</h1>
-<p>In every case above, when you arrive at a command prompt, type:</p>
-<pre><code>git
-</code></pre><p>You will see an outline of the syntax plus a list of some of the most common commands, with an explanation of their usage.</p>
-<p><img src="../images/git_cli.png" alt="Git CLI"></p>
+<h3 id="qgis">QGIS</h3>
+<p><strong>When reporting QGIS issues it&apos;s really important to provide information on the source of your installation. For windows users, did you use the stand-alone installer or OSGeo4W? For linux users which repository did your software come from?</strong></p>
+<p>QGIS has a number of options for helping you debug problems including the messages panel, which logs messages for plugins as well as the main software itself. This can be activated from the bottom right corner of the main window in QGIS 2.14</p>
+<p><img src="../images/qgis_messagepanel.png" alt="QGIS Message Panel"></p>
+<p>Lutra Consulting have also released a plugin that helps with the bug reporting process. It&apos;s a little tricky to set up and use but extremely useful. Find it on <a href="http://plugins.qgis.org/plugins/report/" target="_blank">plugins.qgis.org</a> and instructions for use on their <a href="http://www.lutraconsulting.co.uk/blog/2016/05/12/qgis-report-plugin/" target="_blank">blog</a>.</p>
+<p>See the online documentation <a href="http://docs.qgis.org/2.8/en/docs/user_manual/preamble/help_and_support.html" target="_blank">help pages</a> for details of all the mailing lists and bug trackers.</p>
+<p>QGIS maintains a list of companies offering commercial support- see <a href="http://www.qgis.org/en/site/forusers/commercial_support.html" target="_blank">qgis.org/en/site/forusers/commercial_support.html</a> for details.</p>
 
                     
                     </section>
@@ -402,10 +390,10 @@
         </div>
 
         
-        <a href="../intro/gitinstall.html" class="navigation navigation-prev " aria-label="Previous page: Installing Git"><i class="fa fa-angle-left"></i></a>
+        <a href="../bugs/index.html" class="navigation navigation-prev " aria-label="Previous page: How to report a bug"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../git/index.html" class="navigation navigation-next " aria-label="Next page: Using Git"><i class="fa fa-angle-right"></i></a>
+        <a href="../fixes/pullrequest.html" class="navigation navigation-next " aria-label="Next page: How to submit a pull request"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
