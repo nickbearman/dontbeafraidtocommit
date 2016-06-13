@@ -53,7 +53,7 @@
         data-chapter-title="How to submit a pull request"
         data-filepath="fixes/pullrequest.md"
         data-basepath=".."
-        data-revision="Wed Jun 08 2016 19:49:34 GMT+0100 (BST)"
+        data-revision="Mon Jun 13 2016 23:24:35 GMT+0100 (BST)"
         data-innerlanguage="">
     
 
@@ -310,7 +310,7 @@
                         
                             <b>5.</b>
                         
-                        Virtual Environments and Containers
+                        Ninja problem-solving and debugging
                     </a>
             
             
@@ -410,6 +410,22 @@
 <p><img src="../images/geonetwork_typo4.png" alt="GeoNetwork Typo #4"></p>
 <p>This will give you one further chance to change your commit message, then hit the final &quot;Create pull request&quot; button and your pull request will be submitted.</p>
 <p><img src="../images/geonetwork_typo5.png" alt="GeoNetwork Typo #5"></p>
+<h2 id="keeping-your-repository-up-to-date">Keeping your repository up to date</h2>
+<p><strong>Note there are multiple approaches for this, depending on your workflow. This exercise is just one way of doing things</strong></p>
+<p>Since multiple people could be collaborating on the repository, you need to ensure your forked copy is kept up to date with all those changes. </p>
+<p>First you need to ensure that your fork of the repository on GitHub is up to date by doing a pull request to get the latest changes. Then you need to download, or pull those changes down into your local repository using the following command:</p>
+<pre><code>git pull
+</code></pre><p><em>Note that doing a pull request in this direction is much easier because you can review and accept, or merge any changes yourself</em></p>
+<h3 id="dealing-with-conflicts">Dealing with conflicts</h3>
+<p>GitHub will attempt to merge changes in files if it can do so automatically. In the event that it can&apos;t, it will provide you with details on how to do this yourself at the command line.</p>
+<p>If you open the conflicted file in a text editor it will show you the conflicts using special notifiers, like so:</p>
+<pre><code>This line is unchanged but
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;HEAD
+Jo edited this line
+===================
+Pete edited this line
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;MASTER
+</code></pre><p>You can manually remove the notifier lines and the incorrect line, then stage and commit your changes in the normal way.</p>
 
                     
                     </section>
