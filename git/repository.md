@@ -29,7 +29,7 @@ Initialise it as a repository:
 
 This might not appear to do anything but it creates a hidden folder called .git inside foss4gukdontbeafraid that contains the information Git needs to track your repository.
 
-* On windows, change your folder preferences to "always view hidden folders" so you can see this folder*
+**On windows, change your folder preferences to "always view hidden folders" so you can see this folder**
 
 That's all we can do until we start adding some files and making changes to them, so let's make a file:
 

@@ -31,6 +31,6 @@ A [Docker](https://www.docker.com/) "container" wraps up a piece of software in 
 Some work has been done to get QGIS working in a Docker container, these are untested and included here for interest:
 
  * [docker-qgis-debian](https://bitbucket.org/timcera/docker-qgis-desktop-debian) - possibly cross-platform
-  * [qgis-desktop-in-docker](http://kartoza.com/qgis-desktop-in-docker/) - linux only
+ * [qgis-desktop-in-docker](http://kartoza.com/qgis-desktop-in-docker/) - linux only
  * [docker-qgis-orchestration](https://libraries.io/github/qgis/docker-qgis-orchestration) - for QGIS server
 
