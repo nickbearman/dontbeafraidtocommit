@@ -14,7 +14,6 @@ We'll hopefully get you in a position where you're familiar with the basic ideas
  * How to report a bug
  * How to submit a pull request to a project hosted on GitHub
  * A brief intro into Python virtual environments and Docker containers and how they might help with bug submission
- * How to write documentation in restructured text or markdown and preview it
 
 # What we're not covering
 
