@@ -15,5 +15,5 @@
 	* [Specifics- Web and QGIS](bugs/specifics.md)
 * [How to submit a pull request](fixes/pullrequest.md)
 	* [Fixing HipsterIpsem](fixes/hipster.md)
-* [Virtual Environments and Containers](bonus/README.md)
+* [Ninja problem-solving and debugging](bonus/README.md)
 * [References](refs/README.md)

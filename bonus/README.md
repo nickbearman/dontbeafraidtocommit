@@ -1,4 +1,4 @@
-#Ninja problem-solving, scripting and debugging##
+#Ninja problem-solving, scripting and debugging
 
 A really good approach to running software on your computer, for both development and debugging purposes, is to consider creating sandboxed enviroments for each piece of software. This allows you to keep all the dependencies for the program packaged up with it, and isolated from other progams on your computer.
 
@@ -30,7 +30,7 @@ A [Docker](https://www.docker.com/) "container" wraps up a piece of software in 
 
 Some work has been done to get QGIS working in a Docker container, these are untested and included here for interest:
 
- * [docker-qgis-debian](https://bitbucket.org/timcera/docker-qgis-desktop-debian) - possibly cross-platform?
- * [qgis-desktop-in-docker](http://kartoza.com/qgis-desktop-in-docker/) - linux only?
- * [docker-qgis-orchestration](https://libraries.io/github/qgis/docker-qgis-orchestration) - for QGIS server?
+ * [docker-qgis-debian](https://bitbucket.org/timcera/docker-qgis-desktop-debian) - possibly cross-platform
+  * [qgis-desktop-in-docker](http://kartoza.com/qgis-desktop-in-docker/) - linux only
+ * [docker-qgis-orchestration](https://libraries.io/github/qgis/docker-qgis-orchestration) - for QGIS server
 

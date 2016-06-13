@@ -15,3 +15,4 @@
 	* __git checkout -b <branchname>__  _create and checkout a new branch_
 * __git push__ _push your committed changes to the remote repository_
 	* __-u origin <branchname>__ _set the remote repository branch you want to commit to_
+* __git pull__ _download changes from remote repository_

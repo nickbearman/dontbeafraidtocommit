@@ -59,7 +59,7 @@ Navigate to the documentation for GeoNetwork Open Source at [http://geonetwork-o
 
 Each page contains a link to "Edit on GitHub".
 
-![GeoNetwork Typo #1](../images/geonetwork_typo1.png)
+![GeoNetwork Typo #1](../images/geonetwok_typo1.png)
 
 If you spot a typo or something that needs clarifying you can click that link to be taken to the correct page in the documentation repository.
 
@@ -80,3 +80,31 @@ Proposing the file change will take you to the Pull Request review window where 
 This will give you one further chance to change your commit message, then hit the final "Create pull request" button and your pull request will be submitted.
 
 ![GeoNetwork Typo #5](../images/geonetwork_typo5.png)
+
+##Keeping your repository up to date##
+
+**Note there are multiple approaches for this, depending on your workflow. This exercise is just one way of doing things**
+
+Since multiple people could be collaborating on the repository, you need to ensure your forked copy is kept up to date with all those changes. 
+
+First you need to ensure that your fork of the repository on GitHub is up to date by doing a pull request to get the latest changes. Then you need to download, or pull those changes down into your local repository using the following command:
+	
+	git pull
+
+*Note that doing a pull request in this direction is much easier because you can review and accept, or merge any changes yourself*
+
+###Dealing with conflicts
+
+GitHub will attempt to merge changes in files if it can do so automatically. In the event that it can't, it will provide you with details on how to do this yourself at the command line.
+
+If you open the conflicted file in a text editor it will show you the conflicts using special notifiers, like so:
+
+	This line is unchanged but
+	<<<<<<<<<<<<<<<<<HEAD
+	Jo edited this line
+	===================
+	Pete edited this line
+	>>>>>>>>>>>>>>>>>MASTER
+
+You can manually remove the notifier lines and the incorrect line, then stage and commit your changes in the normal way.
+
