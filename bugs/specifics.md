@@ -5,7 +5,6 @@
 Most modern browsers now come with some form of developer console and toolkit. Examples include:
 
  * [Chrome Developer tools](https://developer.chrome.com/devtools)
- * [Firebug for firefox](http://getfirebug.com/)
  * [Firefox Toolbox](https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox)
  * [Internet Explorer F12 Developer tools](https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85).aspx)
 
