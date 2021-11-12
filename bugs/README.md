@@ -25,7 +25,7 @@ Report the results of these tests to the developer. Let them know the configurat
 
 ###Bug Trackers###
 
-Most software projects have a dedicated bug tracker for reporting problems. This the correct place to report your problem rather than any other channel, such as twitter o email, even if it is quicker for you to dash off an email to someone, however quick and easy it is to do that. 
+Most software projects have a dedicated bug tracker for reporting problems. This the correct place to report your problem rather than any other channel, such as twitter or email, even if it is quicker for you to dash off an email to someone, however quick and easy it is to do that. 
 
 Firstly, check to see if the problem has been reported before. This could mean searching for closed issues as well as open ones. Most bug trackers have a method of filtering the issues to help with this.
 
