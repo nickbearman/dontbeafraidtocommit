@@ -1,6 +1,6 @@
 # Don't be afraid to commit
 
-**See online version at [archaeogeek.github.io/foss4gukdontbeafraid](http://archaeogeek.github.io/foss4gukdontbeafraid/)**
+**See online version at [nickbearman.github.io/dontbeafraidtocommit/](https://nickbearman.github.io/dontbeafraidtocommit/)**
 
 This workshop is inspired by the "Don't be afraid to commit" workshops run at various PyCon events, and documented at [readthedocs](http://dont-be-afraid-to-commit.readthedocs.io/en/latest/index.html#) but with a focus on getting you going with GitHub, learning how to submit bugs properly, and finally submitting fixes (or pull requests) to projects. We'll briefly touch on things like python virtual environments, containers, like Docker, and also also the markdown and restructured text syntaxes commonly used for documentation.
 
